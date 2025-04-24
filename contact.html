@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mika's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/mikaux.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- *************************Navbar************************* -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/mikaux.png" alt="Logo" />
+        </a>
+        
+        <i class="bx bx-menu" id="menu" style="color: #ffffff"></i>
+        <nav class="navbar">
+          <a href="index.html" style="--vlr: 1" class="active">About</a>
+          <a href="skills.html" style="--vlr: 1" class="active">Skills</a>
+          <a href="projects.html" style="--vlr: 3">Projects</a>
+          <a href="challenges.html" style="--vlr: 1" class="active">Challenges</a>
+          <a href="plans.html" style="--vlr: 4">Plans</a>
+          <a href="resume.html" style="--vlr: 1" class="active">Resume</a>
+          <a href="contact.html" style="--vlr: 5">Contact</a>
+        </nav>
+      </header>       
+    </header>
+
+     <!-- *************************Contact Section************************* -->
+<section class="contact start-animation" id="contact">
+    <h2 class="title">Contact <span>Me</span></h2>
+    <!-- google sheets contact-->
+    <div class="contact-container">
+            <form name="submit-to-google-sheet">
+                <div class="input-box">
+                    <input type="text" name="fname" placeholder="First Name">
+                    <input type="text" name="lname" placeholder="Last Name">
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required placeholder="Email">
+                    <input type="tel" name="mobile" placeholder="Mobile Number">
+                </div>
+                <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </div>
+        
+    </div>
+    <span id="msg"></span>
+</section>
+
+<!-- Popup message -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p>Message Sent!</p>
+    </div>
+</div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

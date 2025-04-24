@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mika's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/mikaux.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- *************************Navbar************************* -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/mikaux.png" alt="Logo" />
+    </a>
+
+    <i class="bx bx-menu" id="menu" style="color: #ffffff"></i>
+    <nav class="navbar">
+      <a href="index.html" style="--vlr: 1" class="active">About</a>
+      <a href="skills.html" style="--vlr: 1" class="active">Skills</a>
+      <a href="projects.html" style="--vlr: 3">Projects</a>
+      <a href="challenges.html" style="--vlr: 1" class="active">Challenges</a>
+      <a href="plans.html" style="--vlr: 4">Plans</a>
+      <a href="resume.html" style="--vlr: 1" class="active">Resume</a>
+      <a href="contact.html" style="--vlr: 5">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ************* First Carousel ************* -->
+  <section class="projects start-animation" id="projects">
+    <h2 class="title">My <span>Projects</span></h2>
+
+    <div class="carousel-container carousel-1">
+      <button class="carousel-btn prev" onclick="moveSlide1(-1)">&#10094;</button>
+      <div class="carousel-slide">
+       
+        <div class="carousel-item">
+          <img src="cvsu/cvsu.jpg" class="project-image" alt="CvSU Site">
+          <div class="content">
+            <h2>CvSU Website</h2>
+            <p>CvSU-Bacoor Campus website showcases the institution's mission, vision, courses offered, and various student organizations.<br>
+               HTML, CSS, JavaScript</p>
+            <a href="cvsu/CvSU WEBSITE/Main.html" class="open-btn" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/lebug1.jpg" class="project-image" alt="Lé.Bug">
+          <div class="content">
+            <h2>Lé.Bug</h2>
+            <p>IT company website that provides technology solutions. Showcasing the company's skills, and services in a user-friendly layout.<br>
+            HTML, CSS, JavaScript</p>
+            <a href="https://github.com/Banabanaa/lebug.git" class="open-btn" target="_blank">Git Repository</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="aristopets/aristopets.png" class="project-image" alt="Aristopets">
+          <div class="content">
+            <h2>Aristopets</h2>
+            <p>Pet services website showcasing products, services and feedback from customers.<br>
+            HTML, CSS JavaScript</p>
+            <a href="aristopets/dcit26/base.html" class="open-btn" target="_blank">Demo</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="dinorun/dino/dinorun.png" class="project-image" alt="Dino">
+          <div class="content">
+            <h2>Dino Run</h2>
+            <p>Simple dinosaur running game made with HTML, CSS and JavaScript</p>
+            <a href="dinorun/dino/index.html" class="open-btn" target="_blank">Demo</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide1(1)">&#10095;</button>
+    </div>
+
+    <div class="show-more-container">
+      <a href="more-projects.html" class="show-more-btn">Show More Projects</a>
+    </div>
+  </section>
+
+  <script>
+    // First Carousel
+    let currentIndex1 = 0;
+    function moveSlide1(direction) {
+      const carouselSlide1 = document.querySelector('.carousel-1 .carousel-slide');
+      const slides1 = document.querySelectorAll('.carousel-1 .carousel-item');
+      const totalSlides1 = slides1.length;
+
+      currentIndex1 += direction;
+      if (currentIndex1 < 0) currentIndex1 = totalSlides1 - 1;
+      else if (currentIndex1 >= totalSlides1) currentIndex1 = 0;
+
+      carouselSlide1.style.transform = `translateX(-${currentIndex1 * 100}%)`;
+    }
+  </script>
+</body>
+</html>
