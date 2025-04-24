@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    background: #dff9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  canvas {
+    border: 2px solid #333;
+    background: linear-gradient(to top, #ffffff 0%, #dff9fb 100%);
+  }
+  
