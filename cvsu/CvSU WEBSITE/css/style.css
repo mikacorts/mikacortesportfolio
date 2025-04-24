@@ -1,0 +1,715 @@
+/* Importing a Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* Root level styles and color variables */
+:root {
+    --main-color: #FFC900; /* Main color used throughout the design */
+    --black: hsl(240, 16%, 9%); /* Black color with HSL values */
+    --bg: #171717; /* Background color */
+    --border: .3rem solid rgba(0, 0, 0, 0.309); /* Border color */
+}
+
+/* Global styles for all elements */
+* {
+    font-family: 'Space Mono', monospace;
+    margin: 10; 
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+/* Global styles for HTML */
+html {
+    font-size: 62.5%; /* Setting base font size to 10px */
+    overflow-x: hidden; /* Hiding horizontal scrollbar */
+    scroll-padding-top: 9rem; /* Adding padding for smooth scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+/* Styling for custom scrollbars */
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ffae00;
+    border-radius: 5rem;
+}
+
+/* Body styles */
+body {
+    background-color: rgb(242, 244, 230); /* Background color for the body */
+}
+
+
+/* Section styles with padding */
+section {
+    padding: 2rem 7%;
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+/* Heading span styles */
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/* Button styles */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #0B4619;
+    background: var(--main-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Button hover styles */
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(90deg, #01005E, #f3c62e);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Logo image styles in the header */
+.header .logo img {
+    height: 7rem;
+}
+
+/* Navigation bar styles in the header */
+.header .navbar a {
+    margin: 0 3rem;
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+/* Navigation bar hover styles */
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+/* Icons styles in the header */
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+/* Icons hover styles */
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+
+/* Search form styles in the header */
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+/* Active state for search form */
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+/* Input styles in the search form */
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+/* Label styles in the search form */
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+/* Label hover styles in the search form */
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+/* Home section styles */
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Content styles in the home section */
+.home .content {
+    max-width: 75rem;
+    padding-right:50px;
+}
+
+/* Home section heading styles */
+.home .content h3 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 2px 2px 4px #f3c62e;
+    margin-top: 10rem;
+}
+
+/* Home section paragraph styles */
+.home .content p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    margin-top: -2rem;
+    color: #000000;
+}
+
+/* About2 section row styles */
+.about2 .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+/* Image styles in the About2 section */
+.about2 .row .image {
+    flex: 1 1 25rem;
+}
+
+/* Image styles in the About2 section */
+.about2 .row .image img {
+    width: 100%;
+}
+
+/* Content styles in the About2 section */
+.about2 .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+/* Heading styles in the About2 section */
+.about2 .row .content h3 {
+    font-size: 3rem;
+    color: #000000;
+}
+
+/* Paragraph styles in the About2 section */
+.about2 .row .content p {
+    font-size: 1.6rem;
+    color: #000000;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/* Gallery section box container styles */
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* Box styles in the Gallery section */
+.gallery .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+/* Icons link styles in the Gallery section */
+.gallery .box-container .box .icons a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+
+/* Hover styles for icons in the Gallery section */
+.gallery .box-container .box .icons a:hover {
+    background: var(--main-color);
+}
+
+/* Image styles in the Gallery section box */
+.gallery .box-container .box .image {
+    padding: 2.5rem 0;
+}
+
+/* About section box container styles */
+.about .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* Box styles in the About section */
+.about .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+/* Paragraph styles in the About section box */
+.about .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #000000;
+    padding: 2rem 0;
+}
+
+/* User image styles in the About section box */
+.about .box-container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Heading styles in the About section box */
+.about .box-container .box h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #000000;
+}
+
+/* Star icon styles in the About section box */
+.about .box-container .box .stars i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+/* Contact section row styles */
+.contact .row {
+    display: flex;
+    background:#01005E;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Map styles in the Contact section row */
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Form styles in the Contact section row */
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+/* Heading styles in the Contact section row */
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+/* Input box styles in the Contact section row */
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg);
+    border: var(--border);
+}
+
+/* Span styles in the Contact section row */
+.contact .row form .inputBox span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+/* Input styles in the Contact section row */
+.contact .row form .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+
+/* Footer styles */
+.footer {
+    background: linear-gradient(90deg, #01005E, #f3c62e);
+    text-align: center;
+}
+
+/* Share section styles in the footer */
+.footer .share {
+    padding: 1rem 0;
+}
+
+/* Social media link styles in the footer */
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+/* Hover styles for social media links in the footer */
+.footer .share a:hover {
+    background-color: var(--main-color);
+}
+
+/* Links section styles in the footer */
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+/* Link styles in the footer */
+.footer .links a {
+    padding: .7rem 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: uppercase;
+    border: var(--border);
+}
+
+/* Hover styles for links in the footer */
+.footer .links a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+}
+
+/* Bottom text styles in the footer */
+.footer .bottom-text {
+    padding: 2rem 0;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+
+/*styles for the societies and organizations section*/
+.societies .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.societies .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+}
+
+.societies .box-container .btnsoc{
+        display: inline-block;
+        font-size: 1.7rem;      
+        padding: .9rem 3rem;
+        color: #0B4619;
+        background: var(--main-color);
+        cursor: pointer;
+        font-weight: bolder;
+}
+/* Button hover styles */
+.btnsoc:hover {
+    letter-spacing: .2rem;
+}
+
+.societies .box-container .btnsoc2{
+    margin-top: 2.5rem;
+    display: inline-block;
+    font-size: 1.7rem;      
+    padding: .9rem 3rem;
+    color: #0B4619;
+    background: var(--main-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+/* Button hover styles */
+.btnsoc:hover2 {
+letter-spacing: .2rem;
+}
+
+.societies .box-container .box img{
+    height: 15rem;
+    width: 15rem;
+}
+
+.societies .box-container .box h3{
+    color: #010000;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+
+.societies .box-container .box:hover{
+    background:#2e7640;
+}
+
+.societies .box-container .box:hover > h3{
+    color:white;
+
+}
+
+.camporgs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap:1.5rem;
+}
+
+.camporgs .box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:var(--border);    
+}
+
+.camporgs .box-container .btnorg{
+    display: inline-block;
+    font-size: 1.7rem;      
+    padding: .9rem 3rem;
+    color: #0B4619;
+    background: var(--main-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+/* Button hover styles */
+.btnorg:hover {
+letter-spacing: .2rem;
+}
+
+.camporgs .box-container .box img{
+    height: 15rem;
+    width: 15rem;
+}
+
+.camporgs .box-container .box h3{
+    color: #000000;
+    font-size: 2rem;
+    padding:1rem 0;
+}
+
+
+.camporgs .box-container .box:hover{
+    background:#2e7640;
+}
+
+.camporgs .box-container .box:hover > h3{
+    color:white;
+
+}
+
+/* Style the "Our Team" section */
+#team {
+    background-color:rgb(242, 244, 230);
+    padding: 40px;
+    text-align: center;
+    color: #000; /* Change text color to black */
+}
+
+#team h2 {
+    font-size: 36px;
+    color: #000; /* Change text color to black */
+    margin-bottom: 20px;
+}
+
+/* Style the circle containers with black text */
+.circle p {
+    text-align: center;
+    margin: 10px 0;
+    color: #000; /* Change text color to black */
+    font-size: 15px;
+}
+
+/* Style the circle container (same as before) */
+.circle-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Style individual circle containers (same as before) */
+.circle {
+    width: 185px;
+    height: 185px;
+    background-color: rgb(242, 244, 230);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    font-size: 18px;
+    color: #000; /* Change text color to black */
+    transition: background-color 0.3s;
+    margin-left: 75px; /* Add margin to create space between the circles */
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Center the text within the circle containers (same as before) */
+.circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.home .fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+    opacity: 0.6; /* Adjust the opacity as needed */
+}
+
+/* GIF styles */
+.home .fixed-background img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Content styles */
+.home .content {
+    max-width: 90rem;
+    padding: 0 7%;
+    z-index: 1; /* Place it above the background */
+    position: relative; /* Ensure content appears above the background */
+    
+}
+/* homepic */
+.image-container {
+    margin-top: 93px; /* Adjust the value to move the image lower */
+    margin-right: 50px;
+}
+
+

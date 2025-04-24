@@ -1,0 +1,80 @@
+/*to create a slideshow with a sliding effect, including styling for the slides */
+
+/* Slider container */
+.slider {
+  width: 100%; /* will make the slider take up the full width of its container */
+  height: 300px; 
+  margin: auto; /* center the slider horizontally */
+  display: grid; /* use CSS Grid for layout */
+  place-items: center; /* center the content both horizontally and vertically within the grid */
+  overflow: hidden; /* hide overflow content */
+}
+
+/* pseudo-elements for fading edges */
+.slider::before,
+.slider::after {
+  content: ""; /* empty content for pseudo-elements */
+  height: 100%; 
+  position: absolute; /* position pseudo-elements absolutely within the slider */
+  width: 20%; 
+  z-index: 2; /* place pseudo-elements above other elements */
+}
+
+.slider::before {
+  left: 0; /* position on the left side */
+  top: 0; /* position at the top */
+  transform: rotateZ(0deg); /* no rotation */
+}
+
+.slider::after {
+  right: 0; /* position on the right side */
+  top: 0; /* position at the top */
+  transform: rotateZ(180deg); /* rotate 180 degrees */
+}
+
+/* slide track styles */
+.slide-track {
+  display: flex; /* use flexbox for layout */
+  width: calc(300px * 15); /* calculate the width as 4500px (300px multiplied by 15) */
+  animation: scroll 30s linear infinite; /* apply scrolling animation */
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* pause the animation when the user hovers over the picture */
+}
+
+/* keyframes for scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* initial state - no horizontal translation */
+  }
+  100% {
+    transform: translateX(calc(-300px * 8.5)); /* final state - horizontal translation to the left */
+  }
+}
+
+/* individual slide styles */
+.slide {
+  width: 400px; /* set the width and height of each slide */
+  height: 300px;
+  display: flex; 
+  align-items: center; /* center the content vertically */
+  padding: 15px; /* add padding around the content */
+  perspective: 100px; /* apply a 3D perspective to child elements */
+}
+
+/* image styles within slides */
+img {
+  width: 100%; /* the imge will fill its container */
+  height: 100%; 
+  border-radius: 0.5em; /* add a slight border-radius for rounded corners */
+  object-fit: cover; /* ensure the image covers its entire container */
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-700); /* add a box shadow for a subtle effect */
+  cursor: pointer; /* change the cursor to a pointer on hover */
+  transition: all 0.2s ease-in-out; /* add a smooth transition effect on hover */
+}
+
+img:hover {
+  transform: scale(1.1); /* scale the image on hover */
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900); /* change box shadow on hover */
+}
